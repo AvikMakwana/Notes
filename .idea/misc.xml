@@ -5,12 +5,14 @@
       <map>
         <entry key="..\:/Users/jeikm/AndroidStudioProjects/Notes/app/src/main/res/drawable/background_add_button.xml" value="0.2615" />
         <entry key="..\:/Users/jeikm/AndroidStudioProjects/Notes/app/src/main/res/drawable/background_done_button.xml" value="0.2615" />
+        <entry key="..\:/Users/jeikm/AndroidStudioProjects/Notes/app/src/main/res/drawable/background_note.xml" value="0.2615" />
         <entry key="..\:/Users/jeikm/AndroidStudioProjects/Notes/app/src/main/res/drawable/background_search.xml" value="0.2615" />
         <entry key="..\:/Users/jeikm/AndroidStudioProjects/Notes/app/src/main/res/drawable/background_subtitle_indicator.xml" value="0.2615" />
         <entry key="..\:/Users/jeikm/AndroidStudioProjects/Notes/app/src/main/res/drawable/ic_done.xml" value="0.2615" />
         <entry key="..\:/Users/jeikm/AndroidStudioProjects/Notes/app/src/main/res/font/ubuntu_bold.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/jeikm/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_create_note.xml" value="0.4" />
         <entry key="..\:/Users/jeikm/AndroidStudioProjects/Notes/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/jeikm/AndroidStudioProjects/Notes/app/src/main/res/layout/iteam_container_note.xml" value="0.34479166666666666" />
       </map>
     </option>
   </component>
