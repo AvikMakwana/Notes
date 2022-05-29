@@ -2,13 +2,19 @@ package com.example.aviknotes.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.example.aviknotes.R;
-import com.example.aviknotes.activities.CreateNoteActivity;
+import com.example.aviknotes.database.NoteDatabase;
+import com.example.aviknotes.entities.Note;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,5 +35,29 @@ public class MainActivity extends AppCompatActivity {
                 );
             }
         });
+
+        getNotes();
+    }
+
+    private  void getNotes(){
+
+        @SuppressLint("StaticFieldLeak")
+        class  GetNotesTask extends AsyncTask<Void, Void, List<Note>>{
+            @Override
+            protected  List<Note> doInBackground(Void... voids){
+                return NoteDatabase
+                        .getDatabase(getApplicationContext())
+                        .noteDao().getAllNotes();
+            }
+
+            @Override
+            protected void onPostExecute(List<Note> notes) {
+                super.onPostExecute(notes);
+                Log.d("MY_NOTES", notes.toString());
+            }
+        }
+
+        new GetNotesTask().execute();
+
     }
 }
