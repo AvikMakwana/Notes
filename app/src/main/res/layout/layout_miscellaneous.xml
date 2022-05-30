@@ -28,7 +28,10 @@
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-<!--        Setting Colors-->
+
+
+        <!--        Setting Colors-->
+
 
 <!--        First Color-->
         <FrameLayout
@@ -157,6 +160,7 @@
 
         </FrameLayout>
 
+        <!--        Title to pick color-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -165,6 +169,9 @@
             android:text="@string/pick_color"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/_13ssp"/>
+
+
+
 
     </LinearLayout>
 
