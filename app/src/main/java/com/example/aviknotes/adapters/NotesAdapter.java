@@ -1,5 +1,6 @@
 package com.example.aviknotes.adapters;
 
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.aviknotes.R;
 import com.example.aviknotes.entities.Note;
+import com.makeramen.roundedimageview.RoundedImageView;
 
 import java.util.List;
 
@@ -55,6 +57,7 @@ public class NotesAdapter extends  RecyclerView.Adapter<NotesAdapter.NoteViewHol
 
         TextView textTitle, textSubtitle, textDateTime;
         LinearLayout layoutNote;
+        RoundedImageView imageNote;
 
 
       NoteViewHolder(@NonNull View itemView) {
@@ -63,6 +66,7 @@ public class NotesAdapter extends  RecyclerView.Adapter<NotesAdapter.NoteViewHol
             textSubtitle = itemView.findViewById(R.id.textSubtitle);
             textDateTime = itemView.findViewById(R.id.textDateTime);
             layoutNote = itemView.findViewById(R.id.layoutNote);
+            imageNote = itemView.findViewById(R.id.imageNote);
         }
 
         void setNote(Note note){
@@ -80,6 +84,12 @@ public class NotesAdapter extends  RecyclerView.Adapter<NotesAdapter.NoteViewHol
             }else{
                 gradientDrawable.setColor(Color.parseColor("#333333"));
             }
+           if (note.getImagePath() != null){
+               imageNote.setImageBitmap(BitmapFactory.decodeFile(note.getImagePath()));
+               imageNote.setVisibility(View.VISIBLE);
+           }else {
+               imageNote.setVisibility(View.GONE);
+           }
       }
 
     }
